@@ -1,0 +1,21 @@
+{
+    "name": "chordSvg",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "mcw0805",
+    "license": "ISC",
+    "dependencies": {
+        "browserify": "^16.2.3",
+        "d3": "^5.7.0",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "jsdom": "^13.1.0",
+        "nodemon": "^1.18.9",
+        "raphael": "^2.2.7"
+    }
+}

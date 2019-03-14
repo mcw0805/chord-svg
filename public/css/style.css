@@ -1,0 +1,158 @@
+body {
+    background-color: whitesmoke;
+}
+
+.wrapper {
+    margin-top: 20px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.card {
+    margin-top: 20px;
+    border-radius: 0;
+    padding: 20px;
+    -moz-box-shadow: 0 0 8px #cecccc;
+    -webkit-box-shadow: 0 0 8px#cecccc;
+    box-shadow: 0 0 8px #cecccc;
+}
+
+.card > h3 {
+    text-align: center;
+}
+
+select {
+    background-color: #e9ecef;
+    /* border: 1px solid #ced4da; */
+    border: 1px solid #e9ecef;
+    /* border-left: #e9ecef; */
+    border-radius: 0;
+    color: #495057;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1"><path d="M4 8L0 4h8z"/></svg>');
+    padding: .5em;
+    padding-right: 1.5em;
+    text-align: center;
+  text-align-last: center;
+    
+    
+}
+
+select:focus, select:active {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+.number-input, .number-input:focus, .number-input:active {
+    border: none;
+    background-color:#e9ecef;
+    text-align: center;
+    box-shadow: none;
+}
+
+pre {
+    margin-left: 4ex;
+}
+
+.option-dropdown {
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.select-label {
+    margin-right: 0.5em;
+}
+
+.barre-row-remove {
+    font-size: 0.9rem;
+    align-items: center;
+    padding: .375rem .75rem;
+    display: flex;
+    line-height: 1.5;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    border:none;
+}
+
+span.select-label-text {
+    background-color:#ced8e2;
+}
+
+.barre-label {
+    font-size: 0.9rem;
+}
+
+.input-group > .input-group-prepend > .string-num-label {
+    width:100px;
+    display: block;
+    text-align: center;
+    border-top-right-radius: 0.25em; border-bottom-right-radius: 0.25em;
+}
+
+.input-group>.input-group-prepend:not(:first-child) > .dropdown-label {
+    border-top-left-radius: 0.25em; border-bottom-left-radius: 0.25em;
+}
+
+.input-group > .input-group-prepend > .select-div {
+    padding: 0px;
+    /* border-radius:7px; */
+    border-top-right-radius: 0.25em; border-bottom-right-radius: 0.25em;
+}
+
+.string-fretnum-input-row {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .form-control {
+        font-size: 11px;
+    }
+  }
+  
+@media (min-width: 768px) {
+    .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn {
+        font-size: 14px;
+        padding:8px 12px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn {
+        font-size: 16px;
+        padding: 8px 14px;
+    
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+}

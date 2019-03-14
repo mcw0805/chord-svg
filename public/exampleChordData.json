@@ -1,0 +1,78 @@
+[
+    {
+        "chordName": "(Guitar) Open C Chord",
+        "stringFretInfo": {
+            "s6": {
+                "fretNumber": "x",
+                "fingerNumber": ""
+            },
+            "s5": {
+                "fretNumber": 3,
+                "fingerNumber": 3
+            },
+            "s4": {
+                "fretNumber": 2, 
+                "fingerNumber": 2
+            },
+            "s3": {
+                "fretNumber": 0, 
+                "fingerNumber": ""
+            },
+            "s2": {
+                "fretNumber": 1, 
+                "fingerNumber": 1
+            },
+            "s1": {
+                "fretNumber": 0, 
+                "fingerNumber": ""
+            }
+        },
+        "chordStartFret": 0,
+        "barreIndicator": []
+    },
+    
+    {
+        "chordName": "(Guitar) D Chord | Barre Chord / A Form",
+        "stringFretInfo": {
+            "s6": {
+                "fretNumber": "x",
+                "fingerNumber": ""
+            }
+        },
+        "chordStartFret": 5,
+        "barreIndicator": [
+            {
+                "fromString": 5,
+                "toString": 1,
+                "relativeFret": 1
+            },
+            {
+                "fromString": 4,
+                "toString": 2,
+                "relativeFret": 3
+            }
+        ]
+    },
+
+    {
+        "chordName": "(Ukulele) C Chord",
+        "stringFretInfo": {
+            "s4": {
+                "fretNumber": 0
+            },
+            "s3": {
+                "fretNumber": 0
+            },
+            "s2": {
+                "fretNumber": 0
+            },
+            "s1": {
+                "fretNumber": 3
+            }
+        },
+        "chordStartFret": 0,
+        "barreIndicator": []
+    }
+
+
+]

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="/css/all.css">
+
+    <!-- this page css -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <script src="/js/downloadUtil.js"></script>
+
+    <title>Display</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card card-body">
+            <h2>Chord SVG</h2>
+            <p>Generate any chord configuration with flexibility and ease.</p>
+
+            <div class="card card-body">
+                <div class="d-flex flex-row">
+                    <div class="p-2"><p>JSON Input Parameters</p></div>
+                    <div class="p-2 ml-auto">
+                        <a data-toggle="collapse" role="button" href="#parameters" aria-expanded="false" aria-controls="parameters">
+                            <i class="fas fa-chevron-circle-down fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="collapse p-2" id="parameters">
+                    <p>
+                        <code>chordName</code>: name of the chord
+                    </p>
+
+                    <p>
+                        <code>stringFretInfo</code>: Dictionary mapping each string to <code>{fretNumber,
+                        &lt;fingerNumber&gt;}</code>
+                            <ul>
+                                <li>
+                                    <code>fretNumber</code>: Fret number the finger placement circle should go to. 
+                                    This should be a number between 1 and 5, inclusive. "x" indicates mute. 0
+                                    indicates open string
+                                </li>
+                                <li>
+                                    <code>fingerNumber [optional]</code>: Finger number to be placed on the fret.
+                                    (Typically on guitar, index = 1, middle = 2, ring = 3, and pinky = 4) 
+                                </li>
+                            </ul>
+                    </p>
+                    
+                    <p>
+                        <code>chordStartFret</code>: Fret number on the instrument the chord should start on.
+                        If not specified, it will default to 0
+                    </p>
+                    
+                    <p>
+                        <code>barreIndicator</code>: Array of <code>[ {fromString, toString, relativeFret, &lt;fingerNumber&gt;}, ...]</code> position and placement for a barre.
+                        <ul>
+                            <li>
+                                <code>fromString</code>: String number of the start of the barre (higher number)
+                            </li>
+                            <li>
+                                <code>toString</code>: String number of the end of the barre (lower number)
+                            </li>
+                            <li>
+                                <code>relativeFret</code>: Fret number on the chord diagram the barre should be placed on
+                            </li>
+                            <li>
+                                <code>fingerNumber [optional]</code>: Finger number used for barre
+                            </li>
+                        </ul>
+                        *Note: On guitar for example, the low E string is the 6th string and the high E string is the 1st string.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- examples card body -->
+            <div class="card card-body">                
+                <% for (let i = 0; i < chordData.length; i++) { %>
+                    <% let exampleJson = chordData[i]['chordJson']; %>
+                    <% let exampleNumber = i + 1; %>
+                    <div class="d-flex flex-row">
+                        <div class="p-2"><a><h6>Example <%= exampleNumber %> - <%= exampleJson.chordName%></h6></a></div>
+                        <div class="p-2 ml-auto">
+                            <a data-toggle="collapse" role="button" href="#chord-svg-example-<%= exampleNumber%>" aria-expanded="false" aria-controls="chord-svg-example-<%= exampleNumber%>">
+                                <i class="fas fa-chevron-circle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse p-2" id="chord-svg-example-<%= exampleNumber%>">
+                        <pre><%= JSON.stringify(exampleJson, null, 4)%></pre>
+                        <div>
+                            <p style="font-weight:bold">Generated Image</p>
+                            <%- chordData[i]['svg'] %>
+                        </div>
+                        
+                    </div>
+
+                <% } %>
+
+            </div> <!-- end sub card body -->
+    </div>
+
+    <!-- <div class="btn-group" role="group">
+        <a href="#" role="button" class="btn btn-primary" aria-disabled="true" id="download-svg-link">Download SVG</a>
+    </div> -->
+
+</body>
+
+</html>
