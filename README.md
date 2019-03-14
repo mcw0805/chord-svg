@@ -71,7 +71,7 @@ exampleUkuleleChord.setChord(ukeCchordData);
 let exampleSvg = exampleUkuleleChord.drawChord(); // do something with this
 ```
 
-<img width="60%" src="https://github.com/mcw0805/chord-svg/blob/master/uke-c.png" />
+<img src="https://github.com/mcw0805/chord-svg/blob/master/uke-c.png" />
 Generated Ukulele C Chord Image
 
 More examples are provided in public/exampleChordData.
