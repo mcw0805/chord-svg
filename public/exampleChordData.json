@@ -55,19 +55,19 @@
     },
 
     {
-        "chordName": "(Ukulele) C Chord",
+        "chordName": "(Ukulele) F Chord",
         "stringFretInfo": {
             "s4": {
-                "fretNumber": 0
+                "fretNumber": 2
             },
             "s3": {
                 "fretNumber": 0
             },
             "s2": {
-                "fretNumber": 0
+                "fretNumber": 1
             },
             "s1": {
-                "fretNumber": 3
+                "fretNumber": 0
             }
         },
         "chordStartFret": 0,
