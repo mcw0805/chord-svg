@@ -72,7 +72,7 @@ let exampleSvg = exampleUkuleleChord.drawChord(); // do something with this
 ```
 
 <img src="https://github.com/mcw0805/chord-svg/blob/master/uke-c.png" />
-Generated Ukulele C Chord Image
+**^^ Generated Ukulele C Chord Image** 
 
 More examples are provided in public/exampleChordData.
 
